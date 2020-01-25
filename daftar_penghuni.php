@@ -18,18 +18,18 @@
         <div class="content-wrapper">
             <!-- START PAGE CONTENT-->
             <div class="page-heading">
-                <h1 class="page-title">Daftar Penghuni</h1>
+                <h1 class="page-title"><?php echo $halaman ?></h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                         <a href="index.html"><i class="la la-home font-20"></i></a>
                     </li>
-                    <li class="breadcrumb-item">Daftar Penghuni</li>
+                    <li class="breadcrumb-item"><?php echo $halaman ?></li>
                 </ol>
             </div>
             <div class="page-content fade-in-up">
                 <div class="ibox">
                     <div class="ibox-head">
-                        <div class="ibox-title">Data Table</div>
+                        <div class="ibox-title"><?php echo $halaman ?></div>
                     </div>
                     <div class="ibox-body">
                         <table class="table table-striped table-bordered table-hover" id="tabel-penghuni" cellspacing="0" width="100%">
@@ -64,9 +64,12 @@
                                         <a class="btn btn-sm btn-info" href="edit_penghuni.php?id=<?php echo $row['id'] ?>">
                                             <span class="ti-pencil"></span> Edit
                                         </a>
-                                        <button class="btn btn-sm btn-danger hapus_penghuni" id="<?php echo $row['id'] ?>">
-                                            <span class="ti-trash"></span> Hapus
-                                        </button>
+                                        <form action="_action/delete_penghuni.php" method="POST">
+                                            <input type="hidden" name="id_penghuni" value="<?php echo $row['id'] ?>">
+                                            <button type="submit" class="btn btn-sm btn-danger hapus-penghuni">
+                                                <span class="ti-trash"></span> Hapus
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                                 <?php } ?>
@@ -92,19 +95,29 @@
 
     <!-- PAGE LEVEL SCRIPTS-->
     <script type="text/javascript">
-        $(function() {
+        $(document).ready(function(){
             $('#tabel-penghuni').DataTable({
-                pageLength: 10,
-                //"ajax": './assets/demo/data/table_data.json',
-                /*"columns": [
-                    { "data": "name" },
-                    { "data": "office" },
-                    { "data": "extn" },
-                    { "data": "start_date" },
-                    { "data": "salary" }
-                ]*/
+                pageLength: 25
             });
-        })
+            $(".hapus-penghuni").click(function(e){
+                e.preventDefault();
+                var form = $(this).parents('form');
+                Swal.fire({
+                    title: 'Hapus Data Penghuni',
+                    text: 'Apakah Anda yakin ingin menghapus data penghuni ini?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#dd3333',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Ya, Hapus',
+                    cancelButtonText: 'Batal',
+                }).then((result) => {
+                    if (result.value) {
+                        form.submit();
+                    }
+                });
+            });
+        });
     </script>
 
 </body>

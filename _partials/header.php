@@ -145,8 +145,10 @@
                             <a class="dropdown-item" href="profile.html"><i class="fa fa-user"></i>Profile</a>
                             <a class="dropdown-item" href="profile.html"><i class="fa fa-cog"></i>Settings</a>
                             <a class="dropdown-item" href="javascript:;"><i class="fa fa-support"></i>Support</a>
-                            <li class="dropdown-divider"></li>
-                            <a class="dropdown-item" onclick="logout_alert()"><i class="fa fa-power-off"></i>Logout</a>
+                            <form action="_action/logout.php" method="POST">
+                                <input type="hidden" name="action" value="logout">
+                                <button type="submit" class="dropdown-item" id="logout-alert"><i class="fa fa-power-off"></i>Logout</button>
+                            </form>
                         </ul>
                     </li>
                 </ul>

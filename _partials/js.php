@@ -11,22 +11,25 @@
     <script src="./assets/vendors/jquery.maskedinput/dist/jquery.maskedinput.min.js" type="text/javascript"></script>
     <script src="./assets/vendors/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
     <script src="./assets/vendors/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-    <script>
-        function logout_alert(){
-            Swal.fire({
-                title: 'Keluar dari sistem',
-                text: 'Apakah Anda yakin ingin keluar dari sistem?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Ya, Keluar',
-                cancelButtonText: 'Batal',
-            }).then((result) => {
-                if (result.value) {
-                    location.href = '_action/logout.php';
-                }
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#logout-alert').click(function(e){
+                e.preventDefault();
+                var form = $(this).parents('form');
+                Swal.fire({
+                    title: 'Keluar dari Sistem',
+                    text: 'Apakah Anda yakin ingin keluar dari sistem?',
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#dd3333',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Ya, Keluar',
+                    cancelButtonText: 'Batal',
+                }).then((result) => {
+                    if (result.value) {
+                        form.submit();
+                    }
+                });
             });
-        }    
+        });
     </script>
-    
