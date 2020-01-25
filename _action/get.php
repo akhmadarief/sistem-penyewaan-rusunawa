@@ -144,7 +144,7 @@
         $(".kamar").click(function () {
             $(".kamar").removeClass("terpilih");
             $(this).addClass("terpilih");
-            document.getElementById("dataPenghuni1").style.display = "block";
+            $('#dataPenghuni1').show();
             var no_kamar = $(this).attr("id");
             $('#no_kamar').val(no_kamar);
             $('#no_kamar2').val(no_kamar);
@@ -155,9 +155,11 @@
                 dataType: "json",
                 success: function(data){
                     if(!data) {
-                        document.getElementById("dataPenghuni2").style.display = "none";
+                        $('#dataPenghuni2').removeAttr('style').hide();
+                        $('#tambah_penghuni').show();
                         $('#tambah_penghuni').attr("href", "tambah_penghuni.php?kamar=" + no_kamar + "&status=Penghuni 1");
-                        $('#edit_penghuni').removeAttr("href");
+                        //$('#edit_penghuni').removeAttr("href");
+                        $('#edit_penghuni').removeAttr('style').hide();
                         $('#nama').val('Belum ada penghuni');
                         $('#nim').val('Belum ada penghuni');
                         $('#no').val('Belum ada penghuni');
@@ -166,12 +168,14 @@
                     }
                     else {
                         if (data.isi_kamar == '1') {
-                            document.getElementById("dataPenghuni2").style.display = "none"; // tidak tampil
+                            $('#dataPenghuni2').removeAttr('style').hide(); // tidak tampil
                         }
                         else {
-                            document.getElementById("dataPenghuni2").style.display = "block";
+                            $('#dataPenghuni2').show();
                         }
-                        $('#tambah_penghuni').removeAttr("href");
+                        //$('#tambah_penghuni').removeAttr("href");
+                        $('#tambah_penghuni').removeAttr('style').hide();
+                        $('#edit_penghuni').show();
                         $('#edit_penghuni').attr("href", "edit_penghuni.php?id=" + data.id);
                         $('#nama').val(data.nama);
                         $('#nim').val(data.nim);
@@ -188,8 +192,10 @@
                 dataType: "json",
                 success: function(data){
                     if(!data) {
+                        $('#tambah_penghuni2').show();
                         $('#tambah_penghuni2').attr("href", "tambah_penghuni.php?kamar=" + no_kamar + "&status=Penghuni 2");
-                        $('#edit_penghuni2').removeAttr("href");
+                        //$('#edit_penghuni2').removeAttr("href");
+                        $('#edit_penghuni2').removeAttr('style').hide();
                         $('#nama2').val('Belum ada penghuni');
                         $('#nim2').val('Belum ada penghuni');
                         $('#no2').val('Belum ada penghuni');
@@ -197,7 +203,9 @@
                         $('#masa_huni2').val('Belum ada penghuni');
                     }
                     else {
-                        $('#tambah_penghuni2').removeAttr("href");
+                        //$('#tambah_penghuni2').removeAttr("href");
+                        $('#tambah_penghuni2').removeAttr('style').hide();
+                        $('#edit_penghuni2').show();
                         $('#edit_penghuni2').attr("href", "edit_penghuni.php?id=" + data.id);
                         $('#nama2').val(data.nama);
                         $('#nim2').val(data.nim);

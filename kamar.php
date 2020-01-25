@@ -177,12 +177,12 @@
                             <div class="ibox-head">
                                 <div class="ibox-title">Data Penghuni I</div>
                                 <div>
-                                    <button class="btn btn-dark btn-sm" id="tambah_penghuni">
+                                    <a class="btn btn-dark btn-sm" id="tambah_penghuni">
                                         <i class="fa fa-plus"></i>
-                                    </button>
-                                    <button class="btn btn-dark btn-sm" id="edit_penghuni">
+                                    </a>
+                                    <a class="btn btn-dark btn-sm" id="edit_penghuni">
                                         <i class="fa fa-pencil"></i>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                             <div class="ibox-body">
@@ -232,12 +232,12 @@
                             <div class="ibox-head">
                                 <div class="ibox-title">Data Penghuni II</div>
                                 <div>
-                                    <button class="btn btn-dark btn-sm" id="tambah_penghuni">
+                                    <a class="btn btn-dark btn-sm" id="tambah_penghuni2">
                                         <i class="fa fa-plus"></i>
-                                    </button>
-                                    <button class="btn btn-dark btn-sm" id="edit_penghuni">
+                                    </a>
+                                    <a class="btn btn-dark btn-sm" id="edit_penghuni2">
                                         <i class="fa fa-pencil"></i>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                             <div class="ibox-body">

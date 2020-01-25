@@ -12,7 +12,7 @@
     <script src="./assets/vendors/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
     <script src="./assets/vendors/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
     <script>
-        function alert(){
+        function logout_alert(){
             Swal.fire({
                 title: 'Keluar dari sistem',
                 text: 'Apakah Anda yakin ingin keluar dari sistem?',
@@ -24,7 +24,7 @@
                 cancelButtonText: 'Batal',
             }).then((result) => {
                 if (result.value) {
-                    location.href = "_action/logout.php";
+                    location.href = '_action/logout.php';
                 }
             });
         }    
