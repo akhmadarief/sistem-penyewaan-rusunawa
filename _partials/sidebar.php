@@ -43,6 +43,11 @@
                             <span class="nav-label">Laporan Piutang</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="kosong.php"><i class="sidebar-item-icon fa fa-th-large"></i>
+                            <span class="nav-label">Kosong</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
