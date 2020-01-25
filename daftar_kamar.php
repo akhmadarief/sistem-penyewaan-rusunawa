@@ -40,43 +40,38 @@
                                 <table class="table table-striped table-bordered table-hover" id="tabel-penghuni" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
-                                            <th>No Kamar</th>
-                                            <th>ID Pendaftaran</th>
-                                            <th>NIM</th>
-                                            <th>Nama Penghuni</th>
-                                            <th>Masa Huni</th>
-                                            <th>Piutang</th>
-                                            <th>Edit</th>
-                                            <th>Hapus</th>
+                                            <th class="text-center">No</th>
+                                            <th class="text-center">No Kamar</th>
+                                            <th class="text-center">ID Pendaftaran</th>
+                                            <th class="text-center">NIM</th>
+                                            <th class="text-center">Nama Penghuni</th>
+                                            <th class="text-center">Masa Huni</th>
+                                            <th class="text-center">Piutang</th>
+                                            <th class="text-center">Edit</th>
+                                            <th class="text-center">Hapus</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                            $no = 1;
-                                            $penghuni = $conn->query("SELECT * FROM penghuni");
-                                            while ($row = $penghuni->fetch_assoc()) {
-                                                echo
-                                                "<tr>
-                                                    <td>".$no++."</td>
-                                                    <td>".$row['no_kamar']."</td>
-                                                    <td>".$row['id']."</td>
-                                                    <td>".$row['nim']."</td>
-                                                    <td>".$row['nama']."</td>
-                                                    <td>".$row['masa_huni']." tahun</td>
-                                                    <td>Rp. ".$row['piutang']."</td>
-                                                    <td class='text-center'>
-                                                        <a class='btn btn-sm btn-info' href='edit_penghuni.php?id=".$row['id']."'>
-                                                            <span class='ti-pencil'>
-                                                            </span>Edit
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                      <button type='button' class='btn btn-sm btn-danger ti-trash hapus_penghuni' id='".$row['id']."'>Delete</button>
-                                                    </td>
-                                                </tr>";
-                                            }
-                                        ?>
+                                        <?php $no = 1; $penghuni = $conn->query("SELECT * FROM penghuni"); while ($row = $penghuni->fetch_assoc()) { ?>
+                                            <tr>
+                                                <td class="text-center"><?php echo $no++ ?></td>
+                                                <td class="text-center"><?php echo $row['no_kamar'] ?></td>
+                                                <td class="text-center"><?php echo $row['id'] ?></td>
+                                                <td class="text-center"><?php echo $row['nim'] ?></td>
+                                                <td class="text-center"><?php echo  $row['nama'] ?></td>
+                                                <td class="text-center"><?php echo $row['masa_huni'] , ' tahun' ?></td>
+                                                <td class="text-center"><?php echo 'Rp. ', $row['piutang'] ?></td>
+                                                <td class="text-center">
+                                                    <a class="btn btn-sm btn-info" href="edit_penghuni.php?id=<?php echo $row['id'] ?>">
+                                                        <span class="ti-pencil">
+                                                        </span>Edit
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                  <button type="button" class="btn btn-sm btn-danger ti-trash hapus_penghuni" id="<?php echo $row['id'] ?>">Delete</button>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>

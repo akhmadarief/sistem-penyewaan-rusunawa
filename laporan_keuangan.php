@@ -40,37 +40,29 @@
                                 <table class="table table-striped table-bordered table-hover" id="tabel-penghuni" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th class='text-center'>No.</th>
-                                            <th class='text-center'>Gedung</th>
-                                            <th class='text-center'>Lantai</th>
-                                            <th class='text-center'>Harga per Bulan</th>
-                                            <th class='text-center'>Harga per Tahun</th>
-                                            <th class='text-center'>Aksi</th>
+                                            <th class="text-center">No.</th>
+                                            <th class="text-center">No. Kamar</th>
+                                            <th class="text-center">Nama</th>
+                                            <th class="text-center">NIM</th>
+                                            <th class="text-center">No. HP</th>
+                                            <th class="text-center">Biaya</th>
+                                            <th class="text-center">Bayar</th>
+                                            <th class='text-center'>Piutang</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                        $no = 1;
-                                            //$harga = $conn->query("SELECT kamar.gedung, harga.lantai, harga.harga FROM harga OUTER JOIN kamar ON harga.lantai=kamar.lantai");
-                                            $harga = $conn->query("SELECT * FROM harga");
-                                            while ($row = $harga->fetch_assoc()) {
-                                                echo
-                                                "<tr>
-                                                    <td class='text-center'>".$no++."</td>
-                                                    <td class='text-center'>Gedung ".$row['gedung']."</td>
-                                                    <td class='text-center'>Lantai ".$row['lantai']."</td>
-                                                    <td class='text-center'>Rp. ".number_format($row['harga'], 0, ',', '.')."</td>
-                                                    <td class='text-center'>Rp. ".number_format($row['harga']*12, 0, ',', '.')."</td>
-                                                    <td class='text-center'>
-                                                        <button class='btn btn-sm btn-info edit_harga' id='".$row['lantai']."'>
-                                                            <span class='ti-pencil'>
-                                                            </span>Edit Harga
-                                                        </button>
-                                                    </td>
-                                                </tr>";
-
-                                            }
-                                        ?>
+                                        <?php $no = 1; $penghuni = $conn->query("SELECT * FROM penghuni"); while ($row = $penghuni->fetch_assoc()) {?>
+                                            <tr>
+                                                <td class="text-center"><?php echo $no++ ?></td>
+                                                <td class="text-center"><?php echo $row['no_kamar'] ?></td>
+                                                <td class="text-center"><?php echo $row['nama'] ?></td>
+                                                <td class="text-center"><?php echo $row['nim'] ?></td>
+                                                <td class="text-center"><?php echo $row['no'] ?></td>
+                                                <td class="text-center"><?php echo 'Rp. ', number_format($row['biaya'], 0, ',', '.') ?></td>
+                                                <td class="text-center"><?php echo 'Rp. ', number_format($row['bayar'], 0, ',', '.') ?></td>
+                                                <td class="text-center"><?php echo 'Rp. ', number_format($row['piutang'], 0, ',', '.') ?></td>
+                                            </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
