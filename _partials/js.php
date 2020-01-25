@@ -8,6 +8,9 @@
     <!-- PAGE LEVEL PLUGINS-->
     <script src="./assets/vendors/DataTables/datatables.min.js" type="text/javascript"></script>
     <script src="./assets/vendors/sweetalert2/sweetalert2.min.js" type="text/javascript"></script>
+    <script src="./assets/vendors/jquery.maskedinput/dist/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="./assets/vendors/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="./assets/vendors/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
     <script>
         function alert(){
             Swal.fire({
@@ -29,7 +32,4 @@
             });
         }    
     </script>
-    <script src="./assets/vendors/jquery.maskedinput/dist/jquery.maskedinput.min.js" type="text/javascript"></script>
-    <script src="./assets/vendors/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
-    <script src="./assets/vendors/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
     
