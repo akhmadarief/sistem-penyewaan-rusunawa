@@ -1,9 +1,20 @@
-<?php $halaman = 'Login' ?>
-
 <!DOCTYPE html>
 <html>
 
-<?php require_once '_partials/head.php' ?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Login | Sistem Penyewaan Rusunawa</title>
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="./assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="./assets/vendors/themify-icons/css/themify-icons.css" rel="stylesheet" />
+    <!-- THEME STYLES-->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <!-- PAGE LEVEL STYLES-->
+    <link href="./assets/css/pages/auth-light.css" rel="stylesheet" />
+</head>
 
 <body class="bg-silver-300">
     <div class="content">
