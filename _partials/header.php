@@ -1,10 +1,10 @@
         <header class="header">
             <div class="page-brand">
                 <a class="link" href="index.html">
-                    <span class="brand">Admin
-                        <span class="brand-tip">CAST</span>
+                    <span class="brand">Rusunawa Undip 
+                        <span class="brand-tip"></span>
                     </span>
-                    <span class="brand-mini">AC</span>
+                    <span class="brand-mini">RU</span>
                 </a>
             </div>
             <div class="flexbox flex-1">
@@ -17,7 +17,7 @@
                         <form class="navbar-search" action="javascript:;">
                             <div class="rel">
                                 <span class="search-icon"><i class="ti-search"></i></span>
-                                <input class="form-control" placeholder="Search here...">
+                                <input class="form-control" placeholder="Cari disini...">
                             </div>
                         </form>
                     </li>

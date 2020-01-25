@@ -1,3 +1,5 @@
+    <!--FAV ICON-->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/undip/favicon1.png">
     <!-- GLOBAL MAINLY STYLES-->
     <link href="./assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
