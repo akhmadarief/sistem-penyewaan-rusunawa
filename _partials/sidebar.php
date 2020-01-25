@@ -5,7 +5,7 @@
                         <img src="./assets/img/admin-avatar.png" width="45px" />
                     </div>
                     <div class="admin-info">
-                        <div class="font-strong">Doni Tampan</div><small>Administrator</small></div>
+                        <div class="font-strong"><?php echo $_SESSION['nama'] ?></div><small>Administrator</small></div>
                 </div>
                 <ul class="side-menu metismenu">
                     <li>
