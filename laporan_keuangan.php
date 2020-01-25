@@ -1,4 +1,4 @@
-<?php require_once '_partials/config.php' ?>
+<?php require_once '_partials/session.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">

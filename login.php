@@ -19,14 +19,14 @@
 <body class="bg-silver-300">
     <div class="content">
         <div class="brand">
-            <a class="link" href="index.html">AdminCAST</a>
+            <a class="link" href="./">Rusunawa Undip</a>
         </div>
-        <form id="login-form" action="javascript:;" method="post">
-            <h2 class="login-title">Log in</h2>
+        <form id="login-form" action="_action/login.php" method="post">
+            <h2 class="login-title">Administrator Login</h2>
             <div class="form-group">
                 <div class="input-group-icon right">
-                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
-                    <input class="form-control" type="email" name="email" placeholder="Email" autocomplete="off">
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                    <input class="form-control" type="text" name="username" placeholder="Username" autocomplete="off">
                 </div>
             </div>
             <div class="form-group">
@@ -79,9 +79,8 @@
             $('#login-form').validate({
                 errorClass: "help-block",
                 rules: {
-                    email: {
-                        required: true,
-                        email: true
+                    username: {
+                        required: true
                     },
                     password: {
                         required: true

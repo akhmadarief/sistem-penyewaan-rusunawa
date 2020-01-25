@@ -1,8 +1,8 @@
 <?php
-    include "config.php";
+    require_once 'config.php';
 
     session_start();
     if($_SESSION['status']!="login_rusunawa"){
-        header("location: login?pesan=belum_login");
+        header("location: login.php?pesan=belum_login");
     }
 ?>
