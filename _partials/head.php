@@ -16,6 +16,8 @@
     <link href="./assets/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" />
     <!-- THEME STYLES-->
     <link href="assets/css/main.min.css" rel="stylesheet" />
+    <!-- SWEET ALERT-->
+    <link href="./assets/vendors/sweetalert2/sweetalert2.min.css" type="text/css" rel="stylesheet">
     <!-- CUSTOM STYLES-->
     <link type="text/css" href="assets/css/custom.css" rel="stylesheet" />
 </head>
