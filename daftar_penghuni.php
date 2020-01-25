@@ -35,29 +35,29 @@
                         <table class="table table-striped table-bordered table-hover" id="tabel-penghuni" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th>No.</th>
-                                    <th>No. Kamar</th>
-                                    <th>Nama</th>
-                                    <th>NIM</th>
-                                    <th>No. HP</th>
-                                    <th>Alamat Asal</th>
-                                    <th>Nama Ortu</th>
-                                    <th>No. HP Ortu</th>
-                                    <th>Aksi</th>
+                                    <th class="text-center">No.</th>
+                                    <th class="text-center">No. Kamar</th>
+                                    <th class="text-center">Nama</th>
+                                    <th class="text-center">NIM</th>
+                                    <th class="text-center">No. HP</th>
+                                    <th class="text-center">Alamat Asal</th>
+                                    <th class="text-center">Nama Ortu</th>
+                                    <th class="text-center">No. HP Ortu</th>
+                                    <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php $no = 1; $penghuni = $conn->query("SELECT * FROM penghuni"); while ($row = $penghuni->fetch_assoc()){ ?>
                                 <tr>
-                                    <td><?php echo $no++ ?></td>
-                                    <td><?php echo $row['no_kamar'] ?></td>
-                                    <td><?php echo $row['nama'] ?></td>
-                                    <td><?php echo $row['nim'] ?></td>
-                                    <td><?php echo $row['no'] ?></td>
-                                    <td><?php echo $row['alamat'] ?></td>
-                                    <td><?php echo $row['nama_ortu'] ?></td>
-                                    <td><?php echo $row['no_ortu'] ?></td>
-                                    <td class='text-center'>
+                                    <td class="text-center"><?php echo $no++ ?></td>
+                                    <td class="text-center"><?php echo $row['no_kamar'] ?></td>
+                                    <td class="text-center"><?php echo $row['nama'] ?></td>
+                                    <td class="text-center"><?php echo $row['nim'] ?></td>
+                                    <td class="text-center"><?php echo $row['no'] ?></td>
+                                    <td class="text-center"><?php echo $row['alamat'] ?></td>
+                                    <td class="text-center"><?php echo $row['nama_ortu'] ?></td>
+                                    <td class="text-center"><?php echo $row['no_ortu'] ?></td>
+                                    <td class="text-center">
                                         <button class="btn btn-sm btn-success view_data" id="<?php echo $row['id'] ?>">
                                             <span class="ti-info-alt"></span> Detail
                                         </button>

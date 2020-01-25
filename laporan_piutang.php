@@ -40,34 +40,29 @@
                                 <table class="table table-striped table-bordered table-hover" id="tabel-penghuni" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th class='text-center'>No.</th>
-                                            <th class='text-center'>No. Kamar</th>
-                                            <th class='text-center'>Nama</th>
-                                            <th class='text-center'>NIM</th>
-                                            <th class='text-center'>No. HP</th>
-                                            <th class='text-center'>Biaya</th>
-                                            <th class='text-center'>Bayar</th>
-                                            <th class='text-center'>Piutang</th>
+                                            <th class="text-center">No.</th>
+                                            <th class="text-center">No. Kamar</th>
+                                            <th class="text-center">Nama</th>
+                                            <th class="text-center">NIM</th>
+                                            <th class="text-center">No. HP</th>
+                                            <th class="text-center">Biaya</th>
+                                            <th class="text-center">Bayar</th>
+                                            <th class="text-center">Piutang</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                            $no = 1;
-                                            $penghuni = $conn->query("SELECT * FROM penghuni");
-                                            while ($row = $penghuni->fetch_assoc()) {
-                                                echo
-                                                "<tr>
-                                                    <td class='text-center'>".$no++."</td>
-                                                    <td class='text-center'>".$row['no_kamar']."</td>
-                                                    <td>".$row['nama']."</td>
-                                                    <td class='text-center'>".$row['nim']."</td>
-                                                    <td>".$row['no']."</td>
-                                                    <td>Rp. ".number_format($row['biaya'], 0, ',', '.')."</td>
-                                                    <td>Rp. ".number_format($row['bayar'], 0, ',', '.')."</td>
-                                                    <td>Rp. ".number_format($row['piutang'], 0, ',', '.')."</td>
-                                                </tr>";
-                                            }
-                                        ?>
+                                        <?php $no = 1; $penghuni = $conn->query("SELECT * FROM penghuni"); while ($row = $penghuni->fetch_assoc()) {?>
+                                            <tr>
+                                                <td class="text-center"><?php echo $no++ ?></td>
+                                                <td class="text-center"><?php echo $row['no_kamar'] ?></td>
+                                                <td class="text-center"><?php echo $row['nama'] ?></td>
+                                                <td class="text-center"><?php echo $row['nim'] ?></td>
+                                                <td class="text-center"><?php echo $row['no'] ?></td>
+                                                <td class="text-center"><?php echo 'Rp. ', number_format($row['biaya'], 0, ',', '.') ?></td>
+                                                <td class="text-center"><?php echo 'Rp. ', number_format($row['bayar'], 0, ',', '.') ?></td>
+                                                <td class="text-center"><?php echo 'Rp. ', number_format($row['piutang'], 0, ',', '.') ?></td>
+                                            </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
