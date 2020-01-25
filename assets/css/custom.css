@@ -1,0 +1,139 @@
+/*DENAH KAMAR*/
+.kamar{
+  color: #4a4e4d;
+  width: 64px;
+  height: 34px;
+  border-radius: 4px;
+  position: relative;
+  margin: 4px;
+  text-align: center;
+  line-height: 35px;
+  display: inline-block;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Opera and Firefox */
+}
+
+.kamar:hover{
+  background-color: #1ba0e285;
+  box-shadow: 0 0 0 0;
+}
+
+.kosong {
+  box-shadow: 0 0 0 2px #1ba0e2 inset;
+}
+
+.terisi1 {
+  background-color: #ffbc34;
+  color: #444645;
+}
+
+.terisi2 {
+  background-color: #df193d;
+}
+
+.terpilih {
+  background-color: #1ba0e2;
+}
+
+.piutang{
+  box-shadow: 0 0 0 2px #615255 inset;
+}
+
+
+
+
+
+/*LEGENDA*/
+.satu-legenda {
+  width: fit-content;
+  float: left;
+}
+
+.legenda-kosong {
+  box-shadow: 0 0 0 2px #1ba0e2 inset;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  position: relative;
+  margin: 4px;
+  text-align: center;
+  line-height: 35px;
+  display: inline-block;
+}
+
+.legenda-terisi1 {
+  background-color: #ffbc34;
+  color: #444645;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  position: relative;
+  margin: 4px;
+  text-align: center;
+  line-height: 35px;
+  display: inline-block;
+}
+
+.legenda-terisi2 {
+  background-color: #df193d;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  position: relative;
+  margin: 4px;
+  text-align: center;
+  line-height: 35px;
+  display: inline-block;
+}
+
+.legenda-piutang {
+  box-shadow: 0 0 0 2px #1ba0e2 inset;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  position: relative;
+  margin: 4px;
+  text-align: center;
+  line-height: 35px;
+  display: inline-block;
+}
+
+.legenda-terpilih {
+  background-color: #1ba0e2;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  position: relative;
+  margin: 4px;
+  text-align: center;
+  line-height: 35px;
+  display: inline-block;
+}
+
+.satu-legenda span{
+  height: 20px;
+}
+
+
+
+
+
+/*DATEPICKER*/
+.input-icon-cal {
+position: absolute;
+font-size: 18px;
+color: #999;
+right: 18px;
+top: 50%;
+-webkit-transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+transform: translateY(-50%);
+cursor: pointer;
+}

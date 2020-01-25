@@ -13,6 +13,7 @@
                             <span class="nav-label">Dasbor</span>
                         </a>
                     </li>
+                    <li class="heading">KAMAR</li>
                     <li>
                         <a href="kamar.php"><i class="sidebar-item-icon fa fa-th"></i>
                             <span class="nav-label">Pilih Kamar</span>
@@ -28,11 +29,13 @@
                             <span class="nav-label">Daftar Harga Kamar</span>
                         </a>
                     </li>
+                    <li class="heading">PENGHUNI</li>
                     <li>
                         <a href="daftar_penghuni.php"><i class="sidebar-item-icon fa fa-users"></i>
                             <span class="nav-label">Daftar Penghuni</span>
                         </a>
                     </li>
+                    <li class="heading">KEUANGAN</li>
                     <li>
                         <a href="laporan_keuangan.php"><i class="sidebar-item-icon fa fa-money"></i>
                             <span class="nav-label">Laporan Keuangan</span>
