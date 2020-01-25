@@ -1,17 +1,11 @@
 <?php require_once '_partials/session.php' ?>
 
+<?php $halaman = 'Pilih Kamar' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Sistem Penyewaan Rusunawa | Beranda</title>
-
-    <!-- CSS -->
-    <?php require_once '_partials/css.php' ?>
-</head>
+<?php require_once '_partials/head.php' ?>
 
 <body class="fixed-navbar">
     <div class="page-wrapper">
@@ -309,7 +303,7 @@
                 var gedung_A = $("#gedung_A").val();
                 $.ajax({
                     type: 'POST',
-                    url: "action/get.php?gedung=A",
+                    url: "_action/get.php?gedung=A",
                     data: {gedung_A: gedung_A},
                     cache: false,
                     success: function(msg){
@@ -317,79 +311,59 @@
                     }
                 });
             }).trigger("change");
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function(){
             $("#gedung_B").change(function(){
                 var gedung_B = $("#gedung_B").val();
                 $.ajax({
                     type: 'POST',
-                    url: "action/get.php?gedung=B",
+                    url: "_action/get.php?gedung=B",
                     data: {gedung_B: gedung_B},
                     cache: false,
                     success: function(msg){
                     $("#lantai_B").html(msg);
                     }
                 });
-            }).trigger("change");;
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function(){
+            }).trigger("change");
             $("#gedung_C").change(function(){
                 var gedung_C = $("#gedung_C").val();
                 $.ajax({
                     type: 'POST',
-                    url: "action/get.php?gedung=C",
+                    url: "_action/get.php?gedung=C",
                     data: {gedung_C: gedung_C},
                     cache: false,
                     success: function(msg){
                     $("#lantai_C").html(msg);
                     }
                 });
-            }).trigger("change");;
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function(){
+            }).trigger("change");
             $("#gedung_D").change(function(){
                 var gedung_D = $("#gedung_D").val();
                 $.ajax({
                     type: 'POST',
-                    url: "action/get.php?gedung=D",
+                    url: "_action/get.php?gedung=D",
                     data: {gedung_D: gedung_D},
                     cache: false,
                     success: function(msg){
                     $("#lantai_D").html(msg);
                     }
                 });
-            }).trigger("change");;
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function(){
+            }).trigger("change");
             $("#gedung_E").change(function(){
                 var gedung_E = $("#gedung_E").val();
                 $.ajax({
                     type: 'POST',
-                    url: "action/get.php?gedung=E",
+                    url: "_action/get.php?gedung=E",
                     data: {gedung_E: gedung_E},
                     cache: false,
                     success: function(msg){
                     $("#lantai_E").html(msg);
                     }
                 });
-            }).trigger("change");;
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function(){
+            }).trigger("change");
             $("#gedung_F").change(function(){
                 var gedung_F = $("#gedung_F").val();
                 $.ajax({
                     type: 'POST',
-                    url: "action/get.php?gedung=F",
+                    url: "_action/get.php?gedung=F",
                     data: {gedung_F: gedung_F},
                     cache: false,
                     success: function(msg){
@@ -399,8 +373,6 @@
             }).trigger("change");;
         });
     </script>
-    <script type="text/javascript">
-
 </body>
 
 </html>

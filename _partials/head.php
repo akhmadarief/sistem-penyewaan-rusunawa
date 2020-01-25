@@ -1,3 +1,8 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Sistem Penyewaan Rusunawa | Beranda</title>
     <!--FAV ICON-->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/undip/favicon1.png">
     <!-- GLOBAL MAINLY STYLES-->
@@ -13,3 +18,4 @@
     <link href="assets/css/main.min.css" rel="stylesheet" />
     <!-- CUSTOM STYLES-->
     <link type="text/css" href="assets/css/custom.css" rel="stylesheet" />
+</head>
