@@ -149,7 +149,7 @@
             $('#no_kamar').val(no_kamar);
             $('#no_kamar2').val(no_kamar);
             $.ajax({
-                url: "action/detail_kamar.php?penghuni=1",
+                url: "_action/detail_kamar.php?penghuni=1",
                 method: "POST",
                 data: {no_kamar: no_kamar},
                 dataType: "json",
@@ -182,7 +182,7 @@
                 }
             });
             $.ajax({
-                url: "action/detail_kamar.php?penghuni=2",
+                url: "_action/detail_kamar.php?penghuni=2",
                 method: "POST",
                 data: {no_kamar: no_kamar},
                 dataType: "json",
