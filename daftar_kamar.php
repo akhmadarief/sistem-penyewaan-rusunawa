@@ -37,7 +37,48 @@
                                 </div>
                             </div>
                             <div class="ibox-body">
-                                
+                                <table class="table table-striped table-bordered table-hover" id="tabel-penghuni" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>No Kamar</th>
+                                            <th>ID Pendaftaran</th>
+                                            <th>NIM</th>
+                                            <th>Nama Penghuni</th>
+                                            <th>Masa Huni</th>
+                                            <th>Piutang</th>
+                                            <th>Edit</th>
+                                            <th>Hapus</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                            $no = 1;
+                                            $penghuni = $conn->query("SELECT * FROM penghuni");
+                                            while ($row = $penghuni->fetch_assoc()) {
+                                                echo
+                                                "<tr>
+                                                    <td>".$no++."</td>
+                                                    <td>".$row['no_kamar']."</td>
+                                                    <td>".$row['id']."</td>
+                                                    <td>".$row['nim']."</td>
+                                                    <td>".$row['nama']."</td>
+                                                    <td>".$row['masa_huni']." tahun</td>
+                                                    <td>Rp. ".$row['piutang']."</td>
+                                                    <td class='text-center'>
+                                                        <a class='btn btn-sm btn-info' href='edit_penghuni.php?id=".$row['id']."'>
+                                                            <span class='ti-pencil'>
+                                                            </span>Edit
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                      <button type='button' class='btn btn-sm btn-danger ti-trash hapus_penghuni' id='".$row['id']."'>Delete</button>
+                                                    </td>
+                                                </tr>";
+                                            }
+                                        ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -53,8 +94,26 @@
     <!-- BEGIN PAGA BACKDROPS-->
     <?php require_once '_partials/preloader.php' ?>
     <!-- END PAGA BACKDROPS-->
+
     <!-- CORE PLUGINS-->
     <?php require_once '_partials/js.php' ?>
+
+    <!-- PAGE LEVEL SCRIPTS-->
+    <script type="text/javascript">
+        $(function() {
+            $('#tabel-penghuni').DataTable({
+                pageLength: 10,
+                //"ajax": './assets/demo/data/table_data.json',
+                /*"columns": [
+                    { "data": "name" },
+                    { "data": "office" },
+                    { "data": "extn" },
+                    { "data": "start_date" },
+                    { "data": "salary" }
+                ]*/
+            });
+        })
+    </script>
 
 </body>
 

@@ -90,9 +90,6 @@
     <!-- CORE PLUGINS & SCRIPTS-->
     <?php require_once '_partials/js.php' ?>
 
-    <!-- PAGE LEVEL PLUGINS-->
-    <script src="./assets/vendors/DataTables/datatables.min.js" type="text/javascript"></script>
-
     <!-- PAGE LEVEL SCRIPTS-->
     <script type="text/javascript">
         $(function() {
