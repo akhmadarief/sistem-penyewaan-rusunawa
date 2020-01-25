@@ -690,11 +690,22 @@
         </div>
     </div>
     <!-- END THEME CONFIG PANEL-->
+
     <!-- BEGIN PAGA BACKDROPS-->
     <?php require_once '_partials/preloader.php' ?>
     <!-- END PAGA BACKDROPS-->
-    <!-- CORE PLUGINS-->
+
+    <!-- CORE PLUGINS & SCRIPTS-->
     <?php require_once '_partials/js.php' ?>
+
+    <!-- PAGE LEVEL PLUGINS-->
+    <script src="./assets/vendors/chart.js/dist/Chart.min.js" type="text/javascript"></script>
+    <script src="./assets/vendors/jvectormap/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
+    <script src="./assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
+    <script src="./assets/vendors/jvectormap/jquery-jvectormap-us-aea-en.js" type="text/javascript"></script>
+
+    <!-- PAGE LEVEL SCRIPTS-->
+    <script src="./assets/js/scripts/dashboard_1_demo.js" type="text/javascript"></script>
 
 </body>
 
